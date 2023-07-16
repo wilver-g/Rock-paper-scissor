@@ -11,9 +11,17 @@
         const rps=["rock","paper", "scissors"]
 
      
-
+       
       
         function singleRound() {
+
+            let winCount=0;
+            let loseCount=0;
+            let tieCount=0;
+
+            for (let i=0; i<5 ; i++) {
+
+
 
             
             
@@ -24,6 +32,8 @@
 
               if (player===null) {
                     alert('You cancelled')
+
+                    return;
                     
                 }
                 
@@ -57,16 +67,25 @@
 
             if (player === computerChoice) {
     alert('It\'s a tie!');
+    tieCount++;
   } else if (
     (player === 'rock' && computerChoice=== 'scissors') ||
     (player === 'paper' && computerChoice === 'rock') ||
     (player === 'scissors' && computerChoice === 'paper')
   ) {
     alert(`You win! ${player} beats  ${computerChoice} `);
+    winCount++;
   } else {
     alert(`You lose! ${computerChoice} beats  ${player} `);
+    loseCount++;
   }
 }
+alert(`You won: ${winCount} times. 
+You lost: ${loseCount} times 
+Tied: ${tieCount} times`); 
+}
+
+
         
 
 
