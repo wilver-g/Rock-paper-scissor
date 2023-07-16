@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const rps=["rock","paper", "scissors"]
+
+     
+
+      
+        function singleRound() {
+
+            
+            
+            const player= prompt("Rock paper scissors?").toLowerCase();
+
+            if (!rps.includes(player)) {
+    alert('Invalid choice. Please enter rock, paper, or scissors.');
+    return; }
+                
+                else {
+            alert(`You are ${player}`);
+        }
+
+           
+        
+
+
+    
+        const computerChoice= rps[(Math.floor(Math.random()*rps.length))]
+     
+        alert(`The computer is ${computerChoice}`)
+     
+                
+           
+
+            if (player === computerChoice) {
+    alert('It\'s a tie!');
+  } else if (
+    (player === 'rock' && computerChoice=== 'scissors') ||
+    (player === 'paper' && computerChoice === 'rock') ||
+    (player === 'scissors' && computerChoice === 'paper')
+  ) {
+    alert(`You win! ${player} beats  ${computerChoice} `);
+  } else {
+    alert(`You lose! ${computerChoice} beats  ${player} `);
+  }
+}
+        
+
+
+    </script>
+</body>
+</html>
