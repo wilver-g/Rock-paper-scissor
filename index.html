@@ -17,22 +17,38 @@
 
             
             
-            const player= prompt("Rock paper scissors?").toLowerCase();
-
-            if (!rps.includes(player)) {
-    alert('Invalid choice. Please enter rock, paper, or scissors.');
-    return; }
-                
-                else {
-            alert(`You are ${player}`);
-        }
+            const player= prompt("Rock paper scissors?")
+           
 
            
-        
 
+              if (player===null) {
+                    alert('You cancelled')
+                    
+                }
+                
+
+           
+                else {
+                    const formattedPlayer = player.toLowerCase();
+
+                    if (!rps.includes(formattedPlayer)) {
+    alert('Invalid choice. Please enter rock, paper, or scissors.');
+    
+    return; }
+                        else {
+            alert(`You are ${player}`);
+                        }
+        }
+
+      
+
+           
 
     
         const computerChoice= rps[(Math.floor(Math.random()*rps.length))]
+
+        
      
         alert(`The computer is ${computerChoice}`)
      
