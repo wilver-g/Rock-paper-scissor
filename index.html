@@ -3,92 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <script>
-
-        const rps=["rock","paper", "scissors"]
-
-     
-       
-      
-        function singleRound() {
-
-            let winCount=0;
-            let loseCount=0;
-            let tieCount=0;
-
-            for (let i=0; i<5 ; i++) {
-
-
-
-            
-            
-            const player= prompt("Rock paper scissors?")
-           
-
-           
-
-              if (player===null) {
-                    alert('You cancelled')
-
-                    return;
-                    
-                }
-                
-
-           
-                else {
-                    const formattedPlayer = player.toLowerCase();
-
-                    if (!rps.includes(formattedPlayer)) {
-    alert('Invalid choice. Please enter rock, paper, or scissors.');
-    
-    return; }
-                        else {
-            alert(`You are ${player}`);
-                        }
-        }
-
-      
-
-           
-
-    
-        const computerChoice= rps[(Math.floor(Math.random()*rps.length))]
-
-        
-     
-        alert(`The computer is ${computerChoice}`)
-     
-                
-           
-
-            if (player === computerChoice) {
-    alert('It\'s a tie!');
-    tieCount++;
-  } else if (
-    (player === 'rock' && computerChoice=== 'scissors') ||
-    (player === 'paper' && computerChoice === 'rock') ||
-    (player === 'scissors' && computerChoice === 'paper')
-  ) {
-    alert(`You win! ${player} beats  ${computerChoice} `);
-    winCount++;
-  } else {
-    alert(`You lose! ${computerChoice} beats  ${player} `);
-    loseCount++;
-  }
-}
-alert(`You won: ${winCount} times. 
-You lost: ${loseCount} times 
-Tied: ${tieCount} times`); 
-}
-
-
-        
-
-
-    </script>
-</body>
+  <div class="main-container">
+    <div class="rock">
+      <button class="btn rock-btn">rock</button>
+    </div>
+    <div class="paper">
+      <button class="btn paper-btn">paper</button>
+    </div>
+    <div class ="scissor">
+      <button class="btn scissor-btn">scissor</button>
+    </div>
+  </div>
+ </body>
 </html>

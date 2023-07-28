@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    outline: 1px solid red;
+    height: 350px;
+    width: 700px;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(125deg, rgb(220, 100, 100),rgb(115, 115, 212));
+}
+
+.btn {
+    padding: 20px;
+    border-radius:10%;
+    font-weight: bold;
+    
+}
+
+.rock-btn {
+    background-image: url("rock.jpg");
+    color: transparent;
+    background-size:80%;
+}
+
+.paper-btn {
+    background-image: url('paper.png');
+    background-size: cover;
+    color: transparent;
+
+}
+
+.scissor-btn {
+    background-image: url('scissor.jpg');
+    background-size:cover;
+    color: transparent;
+}
+
+.clicked {
+    transform: scale(0.9); /* Example animation: scales the button to 90% of its original size */
+  }
